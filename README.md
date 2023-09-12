@@ -1,13 +1,11 @@
 # Split iterm panes by user defined structure
 
-> TODO - publish to pypi, until published, use `python3 main.py` instead of `iterm-pane-spliter`
-
 Split iterm panes by user defined structure from the command line.
 
 ## Usage
 ```bash
-pip3 install -r requirements.txt
-python3 main.py <json-structure>
+pip3 install iterm-pane-spliter
+iterm-pane-spliter <json-structure>
 ```
 
 the structure is a json Matrix, where each value is a different pane, the number of panes is the number of different values in the matrix.
