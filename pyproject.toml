@@ -5,17 +5,17 @@ authors = [
 ]
 description = "Split iTerm2 panes from the command line"
 readme = "README.md"
-license = "MIT"
 classifiers = [
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11"
 ]
-install_requires=[
-    'iterm2',
+dependencies = [
+    'iterm2 ~= 2.7',
 ]
 requires-python = ">=3.8.1"
 dynamic = ["version"]
@@ -24,36 +24,3 @@ dynamic = ["version"]
 Documentation = "https://github.com/rluvaton/iterm-pane-spliter/tree/main/README.md"
 Source = "https://github.com/rluvaton/iterm-pane-spliter"
 Tracker = "https://github.com/rluvaton/iterm-pane-spliter/issues"
-
-[tool.flake8]
-max-line-length = 120
-select = "F,E,W,B,B901,B902,B903"
-exclude = [
-    ".eggs",
-    ".git",
-    ".tox",
-    "venv",
-    "nssm",
-    "obj",
-    "out",
-    "packages",
-    "pywin32",
-    "tests",
-    "swagger_client"
-]
-ignore = [
-    "E722",
-    "B001",
-    "W503",
-    "E203"
-]
-venv = "env37"
-
-reportMissingImports = true
-reportMissingTypeStubs = false
-
-pythonVersion = "3.7"
-
-executionEnvironments = [
-  { root = "src" }
-]
