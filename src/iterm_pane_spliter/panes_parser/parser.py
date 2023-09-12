@@ -1,7 +1,7 @@
 from typing import Union
 
-from panes_parser.panes_tree import TreeNode, Size, TreeLeaf, SplitNode
-from panes_parser.validator import assert_pane_structure
+from src.iterm_pane_spliter.panes_parser.panes_tree import Size, TreeNode, TreeLeaf, SplitNode
+from src.iterm_pane_spliter.panes_parser.validator import assert_pane_structure
 
 
 def convert_pane_structures_to_tree(pane_structure: list[list[Union[int, str]]]) -> TreeNode:
@@ -122,13 +122,19 @@ def get_last_column_to_split(pane_structure: list[list[Union[int, str]]]) -> Uni
     return get_last_row_to_split(list(map(list, zip(*pane_structure))))
 
 
-def split_to_2_vertical_sections(pane_structure: list[list[Union[int, str]]], column_index: int) -> tuple[list[list[Union[int, str]]], list[list[Union[int, str]]]]:
+def split_to_2_vertical_sections(
+        pane_structure: list[list[Union[int, str]]],
+        column_index: int
+) -> tuple[list[list[Union[int, str]]], list[list[Union[int, str]]]]:
     left = [row[:column_index] for row in pane_structure]
     right = [row[column_index:] for row in pane_structure]
     return left, right
 
 
-def split_to_2_horizontal_sections(pane_structure: list[list[Union[int, str]]], row_index: int) -> tuple[list[list[Union[int, str]]], list[list[Union[int, str]]]]:
+def split_to_2_horizontal_sections(
+        pane_structure: list[list[Union[int, str]]],
+        row_index: int
+) -> tuple[list[list[Union[int, str]]], list[list[Union[int, str]]]]:
     top = pane_structure[:row_index]
     bottom = pane_structure[row_index:]
     return top, bottom

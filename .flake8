@@ -1,0 +1,11 @@
+[flake8]
+max-line-length = 120
+select = "F,E,W,B,B901,B902,B903"
+exclude = venv
+
+ignore =
+    E722,
+    B001,
+    W503,
+    E203
+venv = "env37"
