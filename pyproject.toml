@@ -24,3 +24,6 @@ dynamic = ["version"]
 Documentation = "https://github.com/rluvaton/iterm-pane-spliter/tree/main/README.md"
 Source = "https://github.com/rluvaton/iterm-pane-spliter"
 Tracker = "https://github.com/rluvaton/iterm-pane-spliter/issues"
+
+[project.scripts]
+iterm-pane-spliter = "iterm_pane_spliter.__main__:cli"

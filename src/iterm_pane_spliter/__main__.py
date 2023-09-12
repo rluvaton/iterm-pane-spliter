@@ -69,7 +69,10 @@ async def main(connection_arg: Connection) -> None:
         await get_tty(pane_session, file_path)
 
 
-if __name__ == "__main__":
+def cli():
+    global base_dir
+    global pane_tree
+
     if len(sys.argv) != 2 and len(sys.argv) != 3:
         print('Usage: python script.py [? tmp dir] "[[1,2,3],[4,5,6]]"')
         sys.exit(1)
@@ -89,3 +92,7 @@ if __name__ == "__main__":
 
     pane_tree = convert_pane_structures_to_tree(pane_structure)
     iterm2.run_until_complete(main)
+
+
+if __name__ == "__main__":
+    cli()
