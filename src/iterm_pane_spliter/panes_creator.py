@@ -2,7 +2,7 @@ from typing import cast, Union
 
 from iterm2 import Session
 
-from panes_parser.panes_tree import TreeNode, TreeLeaf, SplitNode
+from iterm_pane_spliter.panes_parser.panes_tree import TreeNode, TreeLeaf, SplitNode
 
 
 class PaneData:

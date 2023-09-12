@@ -7,10 +7,10 @@ from typing import Union
 import iterm2
 from iterm2 import Connection, App, Window
 
-from panes_creator import PaneData, split_trees
-from panes_parser.panes_tree import TreeNode
-from panes_parser.parser import convert_pane_structures_to_tree
-from terminal_helper import set_pane_size, get_tty
+from iterm_pane_spliter.panes_creator import PaneData, split_trees
+from iterm_pane_spliter.panes_parser.panes_tree import TreeNode
+from iterm_pane_spliter.panes_parser.parser import convert_pane_structures_to_tree
+from iterm_pane_spliter.terminal_helper import set_pane_size, get_tty
 
 app: Union[App, None] = None
 window: Union[Window, None] = None

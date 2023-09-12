@@ -1,5 +1,5 @@
 from typing import Union
-from src.iterm_pane_spliter.panes_parser.types import Corner, Coordinates
+from iterm_pane_spliter.panes_parser.types import Corner, Coordinates
 
 
 def assert_pane_structure(pane_structure: list[list[Union[int, str]]]) -> None:

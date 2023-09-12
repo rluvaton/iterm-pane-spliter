@@ -1,7 +1,7 @@
 from typing import Union
 
-from src.iterm_pane_spliter.panes_parser.panes_tree import Size, TreeNode, TreeLeaf, SplitNode
-from src.iterm_pane_spliter.panes_parser.validator import assert_pane_structure
+from iterm_pane_spliter.panes_parser.panes_tree import Size, TreeNode, TreeLeaf, SplitNode
+from iterm_pane_spliter.panes_parser.validator import assert_pane_structure
 
 
 def convert_pane_structures_to_tree(pane_structure: list[list[Union[int, str]]]) -> TreeNode:

@@ -3,7 +3,7 @@ from math import ceil
 import iterm2.util
 from iterm2 import Session
 
-from panes_parser.panes_tree import Size
+from iterm_pane_spliter.panes_parser.panes_tree import Size
 
 
 async def get_tty(session: Session, output_path: str) -> None:
