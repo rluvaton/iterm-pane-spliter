@@ -1,8 +1,7 @@
 import unittest
 
-# from iterm_pane_spliter.panes_creator import split_trees
-from src.iterm_pane_spliter.panes_parser.panes_tree import Size, TreeNode, SplitNode, TreeLeaf
-from src.iterm_pane_spliter.panes_parser.parser import convert_pane_structures_to_tree
+from iterm_pane_spliter.panes_parser.panes_tree import Size, TreeNode, SplitNode, TreeLeaf
+from iterm_pane_spliter.panes_parser.parser import convert_pane_structures_to_tree
 
 
 class TestPanesParser(unittest.TestCase):
