@@ -18,7 +18,7 @@ jobs:
           python-version: 3.11.3
 
       - name: Publish Release to PyPi
-        uses: microsoft/action-python@0.7.1
+        uses: microsoft/action-python@0.7.2
         with:
           pypi_publish: true
           pypi_password: ${{ secrets.PYPI_PASSWORD }}
